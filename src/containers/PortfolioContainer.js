@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import CashBalance from '../components/portfolio/CashBalance'
 import PurchaseForm from '../components/portfolio/PurchaseForm'
 import StockList from '../components/portfolio/StockList'
-
 import {useDispatch, useSelector} from 'react-redux'
 import {setTotalEarnings} from '../actions/stockActions'
 import {currencyFormatter} from '../actions/currencyFormatter'
@@ -26,9 +25,7 @@ const PortfolioContainer = () => {
         <span>
           {'TOTAL EARNINGS: USD '} 
           <strong>
-            {/* still working out this render */}
-            {/* {totalEarnings === null ? 'calculating...' : currencyFormatter(totalEarnings)} */}
-            {typeof totalEarnings !== 'number' || totalEarnings === NaN ? 'calculating...' : currencyFormatter(totalEarnings)}
+            {Number.isNaN(totalEarnings) ? 'calculating...' : currencyFormatter(totalEarnings)}
           </strong>
         </span>
         <StockList/>
