@@ -33,9 +33,9 @@ const PurchaseForm = () => {
       const stockId = stock ? stock.id : null
 
       dispatch(recordTransaction(record, stockId))
-      clearForm()
     } 
     dispatch({type: 'COMPLETED_TRANSACTION'})
+    clearForm()
   }
 
   return (

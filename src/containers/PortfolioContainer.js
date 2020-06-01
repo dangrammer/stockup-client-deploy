@@ -25,7 +25,7 @@ const PortfolioContainer = () => {
         <span>
           {'TOTAL EARNINGS: USD '} 
           <strong>
-            {Number.isNaN(totalEarnings) ? 'calculating...' : currencyFormatter(totalEarnings)}
+            {Number.isNaN(totalEarnings) ? 'Calculating...' : currencyFormatter(totalEarnings)}
           </strong>
         </span>
         <StockList/>
